@@ -2,8 +2,9 @@
 
 <%= render "form", friend: @friend %>
 
-<br>
-
-<div>
-  <%= link_to "Back to friends", friends_path %>
-</div>
+<br> 
+  <%= link_to friends_path do %>
+    <div class="btn btn-blue">"Back to friends"
+    </div>
+  <% end %>
+ 

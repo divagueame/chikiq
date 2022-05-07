@@ -1,3 +1,4 @@
+<div class="">
 <%= form_with(model: friend) do |form| %>
   <% if friend.errors.any? %>
     <div style="color: red">
@@ -32,6 +33,7 @@
   </div>
   
   <div>
-    <%= form.submit %>
+    <%= form.submit 'ADD Friend', :class => "btn btn-blue" %>
   </div>
 <% end %>
+</div>

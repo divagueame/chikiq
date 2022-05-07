@@ -1,14 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Friends</h1>
-
-<div id="friends">
+<% if(current_user) then %>
+<div class="bg-green-200" id="friends">
+<h2>Your current friends...</h2> 
   <% @friends.each do |friend| %>
     <%= render friend %>
-    <p>
-      <%= link_to "Show this friend", friend %>
-    </p>
+      <%= link_to "Show this friend", friend, class: "btn btn-blue" %>
+ 
   <% end %>
 </div>
 
-<%= link_to "New friend", new_friend_path %>
+<%= link_to "New friend", new_friend_path, class: "btn btn-blue" %>
+
+<% else %>
+NOT
+<% end %>
+
+<style>
+
+</style>
