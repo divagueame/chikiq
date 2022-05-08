@@ -2,10 +2,8 @@
 
 <%= render @friend %>
 
-<div>
-  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-blue"  %> 
-
-
+<div class="flexy-end">
+  <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-blue"  %>
   <%= link_to "Back to friends", friends_path, class: "btn btn-blue"  %>
   <%= button_to "Destroy this friend", @friend, method: :delete, class: "btn btn-red"  %>
 </div>

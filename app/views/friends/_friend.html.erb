@@ -1,22 +1,40 @@
-<div  class="bg-yellow-400 p-2 w-full rounded-xl my-1 flex flex-row gap-3 justify-between" id="<%= dom_id friend %>">
-  <div>
-    <strong>Name:</strong>
-    <%= friend.name %>
-  </div>
+<%= link_to friend do %> 
+  <div  class="bg-yellow-400 p-2 rounded-xl m-3 flexy flex-nowrap p-2 bg-yellow-100 rounded hover:bg-yellow-300" id="<%= dom_id friend %>">
 
-  <div>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </div>
+    <div class="basis-1/5">
+        <%= friend.name%>
+    </div>
 
-  <div>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </div>
+    <div class="basis-1/5">
+      <%= friend.email %>
+    </div>
 
-    <div>
-    <strong>User_id:</strong>
-    <%= friend.user_id %>
-  </div>
+    <div class="basis-1/5">
+      <strong>Phone:</strong>
+      <%= friend.phone %>
+    </div>
 
+ 
+
+    <div class="basis-1/5">
+      <strong>User_id:</strong>
+      <%= friend.user_id %>
+    </div>
+
+ 
+    <div class="basis-1/5 flexy-end"> 
+      <%= button_to "Edit",
+        edit_friend_path(friend),
+        class: " px-2 p-1 rounded bg-blue-500 hover:bg-blue-300 inline"
+      %> 
+
+      <%= button_to "Delete",
+        friend_path(friend),
+        class: "  px-2 p-1 rounded bg-blue-500 hover:bg-blue-300 inline",
+        method: :delete
+        # data: { "turbo-method": :delete }
+        %>
+    </div>
 </div>
+   
+<% end %> 

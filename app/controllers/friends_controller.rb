@@ -13,7 +13,7 @@ class FriendsController < ApplicationController
   # GET /friends/1 or /friends/1.json
   def show
   end
-
+  
   # GET /friends/new
   def new
     # @friend = Friend.new
@@ -22,6 +22,8 @@ class FriendsController < ApplicationController
   
   # GET /friends/1/edit
   def edit
+    p 'Edit'
+    
   end
   
   # POST /friends or /friends.json
@@ -68,6 +70,7 @@ class FriendsController < ApplicationController
     redirect_to friends_path, notice: "Not authorized to edit this friend" if @friend.nil?
   end
 
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_friend

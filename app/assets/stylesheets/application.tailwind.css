@@ -17,3 +17,9 @@
   .btn-red:hover {
     @apply bg-red-600;
   }
+  .flexy {
+    @apply flex flex-row gap-3 justify-between;
+  }
+  .flexy-end {
+    @apply flex flex-row gap-3 justify-end;
+  }
